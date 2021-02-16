@@ -13,4 +13,4 @@ client.on('message',(msg,rinfo)=>{
 	console.log(msg.toString());
 	console.log(`receive message from ${rinfo.address}:${rinfo.port}`);
 });
-client.send(`hello`,9999,'127.0.0.1');
+client.send(`这是来自客户端的内容`,9999,'127.0.0.1');
