@@ -18,10 +18,11 @@ client.on('message',(msg,rinfo)=>{
 	console.log(msg.toString());
 	console.log(`receive message from ${rinfo.address}:${rinfo.port}`);
 });
-var times = 10;
+client.send(`这是来自客户端的内容`,9999,'192.168.0.183');
+/*var times = 10;
 while(times){
 	sleep.sleep(1);
-	client.send(`这是来自客户端的内容`,9999,'192.168.0.183');
+	
 	times--;
-}
+}*/
 
