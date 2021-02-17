@@ -1,4 +1,6 @@
 import socket
+import datetime
+
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -10,6 +12,7 @@ print('Bind UDP on 9999...')
 while True:
     # 接收数据:
     data, addr = s.recvfrom(1024)
+    x = datetime.datetime.now()
     print('Received from %s:%s.' % addr)
-    reply = 'Hello, %s!' % data.decode('utf-8')
+    reply = 'Hello, %s!' % data.decode('utf-8') % x
     s.sendto(reply.encode('utf-8'), addr)
