@@ -30,7 +30,32 @@ class creatchatroom:
         file.close
     def getroomname(self):
         return self.name
+    def getchathistory(self):
+        file = open(self.path,'r')
+        chathistory = file.read()
+        # print(chathistory)
+        file.close()
+        return chathistory
+    def joinuser(self, str_username):
+        userjoindate = str(datetime.datetime.now())
+        userinfoLine = 4 # 这是事实上是第五行
+        needinsertline = 'User: '+ str_username +'\tJoined at '+ userjoindate + '\n'
+        lines = []
+        file = open(self.path,'r')
+        for line in file:
+            lines.append(line)
+        file.close
+        lines.insert(userinfoLine,needinsertline)
+        s = ''.join(lines)
+        file = open(self.path,'w+')
+        file.write(s)
+        file.close()
+        del lines[:]
         
+Room_1 = creatchatroom('Room-1',16,'Zhangsan')
+Room_2 = creatchatroom('Room-2',16,'Zhangsan')
+Room_2.joinuser('Li_Si')
+# print(Room_2.getchathistory())
 # room1 = chatroom('chatroomOne', 16,"张三")
 # room1 = room1.addmsgtopath("张三","这是一条测试内容，来查看是否换行和生成新文件")
 # print(room1.name)
