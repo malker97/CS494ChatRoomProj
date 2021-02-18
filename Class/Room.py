@@ -17,7 +17,7 @@ class creatchatroom:
         self.path += name
         if os.path.exists(self.path) == False:
             file = open(self.path,"a")
-            file.write('Creat Date:\n'+str(datetime.datetime.now())+'\n'+'Creater:\n'+creater+'\n\n\n')
+            file.write('Creat Date:\n'+str(datetime.datetime.now())+'\n'+'Creater:\n'+creater+'\n')
             file.close
     # 这个是给房间生成了更改密码的方法
     def changepasswd(self, newpasswd):
@@ -51,10 +51,21 @@ class creatchatroom:
         file.write(s)
         file.close()
         del lines[:]
-        
-Room_1 = creatchatroom('Room-1',16,'Zhangsan')
-Room_2 = creatchatroom('Room-2',16,'Zhangsan')
-Room_2.joinuser('Li_Si')
+    def getroominfo(self):
+        lines = []
+        file = open(self.path,'r')
+        for line in file:
+            lines.append(line)
+            if lines == '\n':
+                break
+        file.close()
+        s = ''.join(lines)
+        print(s)
+# Room_1 = creatchatroom('Room-1',16,'Zhangsan')
+# Room_2 = creatchatroom('Room-2',16,'Zhangsan')
+Room_10 = creatchatroom('Room-10',16,'Zhangsan')
+Room_10.joinuser('Li_Si')
+Room_10.getroominfo()
 # print(Room_2.getchathistory())
 # room1 = chatroom('chatroomOne', 16,"张三")
 # room1 = room1.addmsgtopath("张三","这是一条测试内容，来查看是否换行和生成新文件")
