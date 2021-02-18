@@ -1,8 +1,8 @@
 import socket
 import datetime
 import sys
-import User
-import Room
+# import User
+# import Room
 # ####################################################################
 # #                       这是测试用的代码                            #                      
 # ####################################################################
