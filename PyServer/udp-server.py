@@ -19,8 +19,9 @@ for i in range(10):
     rooms.append(Room.creatchatroom('Room-'+str(i),i,users[i].username))
 # 这个是显示房间信息的功能
 def listrooms(roomslist):
+    str_roomlist = ''
     for i in range(len(rooms)):
-        print(roomslist[i].name)
+        str_roomlist += str(roomslist[i].name)
 # listrooms(rooms)
 for i in range(20):
     rooms[1].addmsg(users[1].username,'Test msg '+str(i))
@@ -32,7 +33,7 @@ for i in range(20):
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 绑定端口:
-s.bind(('192.168.0.106', 9999))
+s.bind(('192.168.0.183', 9999))
 
 print('Bind UDP on 9999...')
 
@@ -44,5 +45,5 @@ while True:
     print(data.decode('utf-8'))
     # reply = str(x)
     # reply += '\nHello, %s!' % data.decode('utf-8')
-    reply = str(x) + '\n' + "这是来自服务器的信息"
+    reply = str(x) + '\n' + listrooms(rooms)
     s.sendto(reply.encode('utf-8'), addr)
