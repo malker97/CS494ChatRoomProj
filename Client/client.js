@@ -1,5 +1,6 @@
 const dgram = require('dgram');
 const sleep = require('sleep');
+// 生成了一个udp服务
 const client = dgram.createSocket('udp4');
 var host;
 const readline = require('readline').createInterface({
