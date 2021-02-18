@@ -64,7 +64,8 @@ class creatchatroom:
                 break
         file.close()
         s = ''.join(lines)
-        print(s)
+        # print(s)
+        return s
 # Room_1 = creatchatroom('Room-1',16,'Zhangsan')
 # Room_2 = creatchatroom('Room-2',16,'Zhangsan')
 Room_10 = creatchatroom('Room-10',16,'Zhangsan')

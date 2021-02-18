@@ -2,7 +2,7 @@ import socket
 import datetime
 import sys
 # import User
-# import Room
+import Room
 # ####################################################################
 # #                       这是测试用的代码                            #                      
 # ####################################################################
@@ -31,6 +31,9 @@ import sys
 # ####################################################################
 # ##############################################################
 #生成了一个UDP服务器名字叫S
+Room_10 = Room.creatchatroom('Room-10',16,'Zhangsan')
+Room_10.joinuser('Li_Si')
+# Room_10.getroominfo()
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 绑定端口:
@@ -46,5 +49,5 @@ while True:
     print(data.decode('utf-8'))
     # reply = str(x)
     # reply += '\nHello, %s!' % data.decode('utf-8')
-    reply = str(x) + '\n' # + listrooms(rooms)
+    reply = str(x) + '\n' + Room_10.getroominfo # + listrooms(rooms)
     s.sendto(reply.encode('utf-8'), addr)
