@@ -28,14 +28,17 @@ class creatchatroom:
         addedstr = str(datetime.datetime.now())+'\n'+ username + '\n' + msg + '\n'
         file.write(addedstr)
         file.close
+    # 这应该只是个封装了get方法，但是目测可能用不到
     def getroomname(self):
         return self.name
+    # 这个是获取聊天记录，但是懒得实现了，所以调取了读取文件内的所以内容
     def getchathistory(self):
         file = open(self.path,'r')
         chathistory = file.read()
         # print(chathistory)
         file.close()
         return chathistory
+    # 这个是记录用户加入的时间在第5行
     def joinuser(self, str_username):
         userjoindate = str(datetime.datetime.now())
         userinfoLine = 4 # 这是事实上是第五行
@@ -51,6 +54,7 @@ class creatchatroom:
         file.write(s)
         file.close()
         del lines[:]
+    # 这个是实现获取谁曾经加入房间，事实上只需要输出回车之前的内容
     def getroominfo(self):
         lines = []
         file = open(self.path,'r')
