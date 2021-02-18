@@ -22,6 +22,7 @@ def listrooms(roomslist):
     str_roomlist = ''
     for i in range(len(rooms)):
         str_roomlist += str(roomslist[i].name)
+    return str_roomlist
 # listrooms(rooms)
 for i in range(20):
     rooms[1].addmsg(users[1].username,'Test msg '+str(i))
