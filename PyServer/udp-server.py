@@ -21,7 +21,7 @@ for i in range(10):
 def listrooms(roomslist):
     str_roomlist = ''
     for i in range(len(rooms)):
-        str_roomlist += str(roomslist[i].name)
+        str_roomlist += str(roomslist[i].name+'\n')
     return str_roomlist
 # listrooms(rooms)
 for i in range(20):
