@@ -16,11 +16,14 @@ client.on('error',(err)=>{
 });
 client.on('message',(msg,rinfo)=>{
 	if(msg=='exit') client.close();
-	console.log(msg.toString());
 	console.log(`receive message from ${rinfo.address}:${rinfo.port}`);
+	console.log(msg.toString());
+	
 });
 
-client.send(`这是来自客户端的内容`,9999,'192.168.0.183');
+client.send(`GET ROOM HIS`,9999,'192.168.0.183');
+client.send(`GET ROOM INFO`,9999,'192.168.0.183');
+client.send(`GET ROOM INFO`,9999,'192.168.0.183');
 /*var times = 10;
 while(times){
 	sleep.sleep(1);

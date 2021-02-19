@@ -22,7 +22,4 @@ class  creatuser:
             file.write("User: "+self.username+"\nNumber:"+str(self.number)+"\nDate:"+self.enterdate+"\nCreated")
             file.close
         # print("User: "+self.username+"\nNumber:"+str(self.number)+"\nCreated")
-        
-        
-
 # print(user1.username)
