@@ -20,7 +20,8 @@ client.on('message',(msg,rinfo)=>{
 	console.log(msg.toString());
 	
 });
-
+//User i Wanna GET/POST HIS/INFO/
+// 0x
 client.send(`GET ROOM HIS`,9999,'192.168.0.183');
 client.send(`GET ROOM INFO`,9999,'192.168.0.183');
 client.send(`GET ROOM INFO`,9999,'192.168.0.183');

@@ -31,9 +31,13 @@ import Room
 # ####################################################################
 # ##############################################################
 #生成了一个UDP服务器名字叫S
-# Room_10 = Room.creatchatroom('Room-10',16,'Zhangsan')
-# Room_10.joinuser('Li_Si')
-# Room_10.getroominfo()
+str_getroomhis = 'GET ROOM HIS'
+str_getroomlist = 'GET ROOM LIST'
+str_getroominfo = 'GET ROOM INFO'
+
+Room_10 = Room.creatchatroom('Room-10',16,'Zhangsan')
+Room_10.joinuser('Li_Si')
+Room_10.getroominfo()
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 绑定端口:
@@ -48,8 +52,11 @@ while True:
     print('Received from %s:%s.' % addr)
     str_command = str_command.decode('utf-8')
     print(str_command)
+    str_ans = ''
+    if(str_command == str_getroomhis):
+        str_ans = Room_10.getroominfo()
     # reply = str(x)
     # reply += '\nHello, %s!' % data.decode('utf-8')
     # if str_command = 
-    reply = str(x) + '\n' # + Room_10.getroominfo() # + listrooms(rooms)
+    reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
     s.sendto(reply.encode('utf-8'), addr)

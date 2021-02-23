@@ -10,6 +10,6 @@ def listrooms(arr_room):
     for i in range(len(arr_room)):
         str_roomlist += str(arr_room[i].name+'\n')
     return str_roomlist
-rooms = []
-creatlotsroom(rooms,20)
-print(listrooms(rooms))
+# rooms = []
+# creatlotsroom(rooms,20)
+# print(listrooms(rooms))
