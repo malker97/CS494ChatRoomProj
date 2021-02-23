@@ -3,6 +3,7 @@ import datetime
 import sys
 import User
 import Room
+import List
 # ####################################################################
 # #                       这是测试用的代码                            #                      
 # ####################################################################
@@ -34,10 +35,12 @@ import Room
 str_getroomhis = 'GET ROOM HIS'
 str_getroomlist = 'GET ROOM LIST'
 str_getroominfo = 'GET ROOM INFO'
+rooms = []
+rooms = List.creatlotsroom(rooms,30)
 
-Room_10 = Room.creatchatroom('Room-10',16,'Zhangsan')
-Room_10.joinuser('Li_Si')
-Room_10.getroominfo()
+# Room_10 = Room.creatchatroom('Room-10',16,'Zhangsan')
+# Room_10.joinuser('Li_Si')
+# Room_10.getroominfo()
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 绑定端口:
@@ -52,9 +55,9 @@ while True:
     print('Received from %s:%s.' % addr)
     str_command = str_command.decode('utf-8')
     print(str_command)
-    str_ans = ''
+    str_ans = List.listrooms(rooms)
     if(str_command == str_getroomhis):
-        str_ans = Room_10.getroominfo()
+        str_ans = rooms[20].getroominfo()
     # reply = str(x)
     # reply += '\nHello, %s!' % data.decode('utf-8')
     # if str_command = 
