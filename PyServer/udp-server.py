@@ -29,6 +29,7 @@ while True:
     str_command, addr = s.recvfrom(1024)
     x = datetime.datetime.now()
     print('Received from %s:%s.' % addr)
+    # print(addr)
     str_command = str_command.decode('utf-8')
     print(str_command)
     str_ans = ''
