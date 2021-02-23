@@ -4,6 +4,7 @@ import Room
 def creatlotsroom(arr_room,num):
     for i in range(num):
         arr_room.append(Room.creatchatroom('Room-'+str(i),i,'Test Uesr'))
+    # return arr_room
 # 这个是显示房间信息的功能
 def listrooms(arr_room):
     str_roomlist = ''
