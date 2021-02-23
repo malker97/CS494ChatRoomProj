@@ -22,9 +22,9 @@ client.on('message',(msg,rinfo)=>{
 });
 //User i Wanna GET/POST HIS/INFO/
 // 0x
-client.send(`GET ROOM HIS`,9999,'192.168.0.183');
-client.send(`GET ROOM INFO`,9999,'192.168.0.183');
-client.send(`GET ROOM INFO`,9999,'192.168.0.183');
+client.send(`GET ROOM HIS`,9999,'malker.cn');
+client.send(`GET ROOM INFO`,9999,'malker.cn');
+client.send(`GET ROOM INFO`,9999,'malker.cn');
 /*var times = 10;
 while(times){
 	sleep.sleep(1);
