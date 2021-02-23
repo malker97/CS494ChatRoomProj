@@ -55,6 +55,8 @@ while True:
     print('Received from %s:%s.' % addr)
     str_command = str_command.decode('utf-8')
     print(str_command)
+    # str_ans = List.listrooms(rooms)
+    str_ans = ''
     str_ans = List.listrooms(rooms)
     if(str_command == str_getroomhis):
         str_ans = rooms[20].getroominfo()
