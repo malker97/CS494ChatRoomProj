@@ -35,8 +35,9 @@ import List
 str_getroomhis = 'GET ROOM HIS'
 str_getroomlist = 'GET ROOM LIST'
 str_getroominfo = 'GET ROOM INFO'
-rooms = []
-rooms = List.creatlotsroom(rooms,30)
+# rooms = []
+# rooms = List.creatlotsroom(rooms,30)
+# print(rooms)
 
 # Room_10 = Room.creatchatroom('Room-10',16,'Zhangsan')
 # Room_10.joinuser('Li_Si')
@@ -57,10 +58,10 @@ while True:
     print(str_command)
     # str_ans = List.listrooms(rooms)
     str_ans = ''
-    str_ans = List.listrooms(rooms)
-    if(str_command == str_getroomhis):
-        str_ans = rooms[20].getroominfo()
-    # reply = str(x)
+    # str_ans = List.listrooms(rooms)
+    # if(str_command == str_getroomhis):
+    #     str_ans = rooms[20].getroominfo()
+    # # reply = str(x)
     # reply += '\nHello, %s!' % data.decode('utf-8')
     # if str_command = 
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
