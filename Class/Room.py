@@ -6,7 +6,7 @@ import time
 import os
 # 这是基于用户的测试部分
 import User
-user_1 = User.creatuser(1,'李华','192.168.0.2')
+# user_1 = User.creatuser(1,'李华','192.168.0.2')
 
 
 

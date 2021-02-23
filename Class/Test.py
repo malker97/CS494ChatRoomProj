@@ -4,6 +4,9 @@ import Room
 import List
 
 # rooms = []
+# List.creatlotsroom(rooms,30)
+# print(List.listrooms(rooms))
+# rooms = []
 # List.creatlotsroom(rooms,20)
 # print(List.listrooms(rooms))
 # defaultuser = User.creatuser(0,'Default','127.0.0.1')
