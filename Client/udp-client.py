@@ -1,8 +1,12 @@
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-for data in [b'Michael', b'Tracy', b'Sarah']:
+commad_lib = [
+    b'Creat new room',
+    b'Get Room Info',
+    b'Get Room Chat History',
+]
+for data in commad_lib:
     # 发送数据:
     s.sendto(data, ('malker.cn', 9999))
     # 接收数据:

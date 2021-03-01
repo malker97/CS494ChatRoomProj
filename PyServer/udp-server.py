@@ -25,6 +25,10 @@ while True:
     str_ans = ''
     if str_command == 'Get Room Info':
         str_ans = List.listrooms(rooms)
-  
+    elif str_command == 'Creat new room':
+        # name,contain,creater
+        newroom = Room.creatchatroom(addr + 's Room',16,addr)
+        
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
+    str_ans = ''
     s.sendto(reply.encode('utf-8'), addr)
