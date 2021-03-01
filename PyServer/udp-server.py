@@ -27,7 +27,7 @@ while True:
         str_ans = List.listrooms(rooms)
     elif str_command == 'Creat new room':
         # name,contain,creater
-        newroom = Room.creatchatroom((str)addr + 's Room',16,addr)
+        newroom = Room.creatchatroom(('Created New Room - 20' + 's Room',16,addr)
 
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
     str_ans = ''
