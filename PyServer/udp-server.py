@@ -7,8 +7,8 @@ import List
 
 rooms = []
 List.creatlotsroom(rooms,40)
-def switchcases(s: str)->str:
-    
+# def switchcases(s: str)->str:
+
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
