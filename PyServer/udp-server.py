@@ -7,6 +7,8 @@ import List
 
 rooms = []
 List.creatlotsroom(rooms,40)
+def switchcases(s: str)->str:
+    
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -23,11 +25,6 @@ while True:
     str_command = str_command.decode('utf-8')
     print(str_command)
     str_ans = ''
-    if str_command == 'Get Room Info':
-        str_ans = List.listrooms(rooms)
-    elif str_command == 'Creat new room':
-        # name,contain,creater
-        newroom = Room.creatchatroom(('Created New Room - 20' + 's Room',16,addr)
 
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
     str_ans = ''
