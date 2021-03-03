@@ -24,6 +24,10 @@ while True:
     print('Received from %s:%s.' % addr)
     str_command = str_command.decode('utf-8')
     print(str_command)
+    if str_command == 'Server plz shut down':
+        print('Server get the shutdown command, it will shutdown now!')
+        s.sendto('Server get the shutdown command, it will shutdown now!'.encode('utf-8'),addr)
+        break
     str_ans = ''
 
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
