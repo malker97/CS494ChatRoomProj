@@ -49,6 +49,7 @@ while True:
     str_ans = ''
     if str_command == 'Get Room List':
         str_ans = List.listrooms(rooms)
+    str_ans = switchcases(str_command)
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
     str_ans = ''
     s.sendto(reply.encode('utf-8'), addr)
