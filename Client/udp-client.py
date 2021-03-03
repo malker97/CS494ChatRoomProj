@@ -17,6 +17,8 @@ for data in commad_lib:
     # 发送数据:
     s.sendto(data, ('malker.cn', 9999))
     # 接收数据:
-    print(s.recv(1024).decode('utf-8'))
-
+    reciv = s.recv(1024).decode('utf-8')
+    print(reciv)
+    if reciv == 'Client will Disconnect':
+        break
 s.close()

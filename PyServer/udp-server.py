@@ -24,10 +24,19 @@ def switchcases(s: str)->str:
     elif s == 'Creat new room':
         rooms.append(Room.creatchatroom('Room-'+str(len(rooms)),len(rooms),'Test Uesr'))
         ans_str = 'Room has created'
-    if str_command == 'Get Room List':
+    elif str_command == 'Get Room List':
         ans_str = List.listrooms(rooms)
-    # elif s == 'Get Room Info':
-    #     for i in range(len(rooms))
+    elif s == 'Get Room Info':
+        ans_str = rooms[1].getroominfo()
+    elif s == 'Get Room Chat History':
+        ans_str = rooms[1].getchathistory()
+    elif s == 'Send Message ~20~ This is a Test Message frome Client':
+        rooms[1].addmsg('Test User', 'This is a Test Message frome Client')
+        ans_str = rooms[1].getchathistory()
+    elif s == 'Disconnect!':
+        ans_str = 'Client will Disconnect'
+    #     for i in range(len(rooms)):
+    
     return ans_str
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
