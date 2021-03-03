@@ -24,6 +24,8 @@ def switchcases(s: str)->str:
     elif s == 'Creat new room':
         rooms.append(Room.creatchatroom('Room-'+str(len(rooms)),len(rooms),'Test Uesr'))
         ans_str = 'Room has created'
+    if str_command == 'Get Room List':
+        ans_str = List.listrooms(rooms)
     # elif s == 'Get Room Info':
     #     for i in range(len(rooms))
     return ans_str
@@ -47,8 +49,7 @@ while True:
         # s.sendto('Server get the shutdown command, it will shutdown now!'.encode('utf-8'),addr)
         break
     str_ans = ''
-    if str_command == 'Get Room List':
-        str_ans = List.listrooms(rooms)
+    
     str_ans = switchcases(str_command)
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
     str_ans = ''
