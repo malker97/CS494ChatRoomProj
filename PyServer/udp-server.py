@@ -29,7 +29,8 @@ while True:
         s.sendto('Server get the shutdown command, it will shutdown now!'.encode('utf-8'),addr)
         break
     str_ans = ''
-
+    if str_command == 'Get Room List':
+        str_ans = List.listrooms(rooms)
     reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
     str_ans = ''
     s.sendto(reply.encode('utf-8'), addr)
