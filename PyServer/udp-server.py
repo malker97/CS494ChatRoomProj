@@ -35,6 +35,7 @@ def switchcases(s: str)->str:
         ans_str = rooms[1].getchathistory()
     elif s == 'Disconnect!':
         ans_str = 'Client will Disconnect'
+
     #     for i in range(len(rooms)):
     
     return ans_str
@@ -42,7 +43,7 @@ def switchcases(s: str)->str:
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 绑定端口:
-s.bind(('192.168.0.183', 9999))
+s.bind(('172.21.14.169', 9999))
 
 print('Bind UDP on 9999...')
 
