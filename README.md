@@ -34,3 +34,8 @@ The server side implements all information storage, including server logs and ro
 * Server can disconnect from clients
 * Server can gracefully handle client crashes
 * Cloud connected server
+# Public Repo's Log
+```
+2021/03/05 15
+make repo public
+```
