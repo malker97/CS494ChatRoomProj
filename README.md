@@ -9,13 +9,18 @@ In order to prevent being suspected of cheating, I deleted all third-party softw
 ```Python 3
 commad_lib = [
     b'Server status', # Client can connect to a server
-    b'Creat new room', # Client can create a room / Client can join a room
+    b'Creat new room', # Client can create a room / join a room
+    # b'Join in the new Room' # Client can join a room
     b'Get Room Info', # Client can list members of a room
     b'Get Room List', # Client can list all rooms
     b'Get Room Chat History', 
-    b'Send Message ~20~ This is a Test Message frome Client'# Client can send messages to a room
-    b'Disconnect!' # Client can disconnect from a server
-    b'Server plz shut down' # Server can disconnect from clients
+    b'Send Message ~20~ This is a Test Message frome Client',# Client can send messages to a room
+    b'Join in Rooms 1,2,3,5', #  Client can join multiple (selected) rooms
+    b'Send Message to ~1,2,5~ This is a Test Message frome Client', #Client can send distinct messages to multiple (selected) rooms
+    b'',
+    b'Disconnect!', # Client can disconnect from a server
+    b'Server plz shut down', # Server can disconnect from clients
+   
     # Client can gracefully handle server crashes
     # Server can gracefully handle client crashes
 ]
