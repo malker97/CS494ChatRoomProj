@@ -1,3 +1,4 @@
+import time ##引入time只是想用sleep函数来更好的展示测试的内容
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -13,7 +14,7 @@ commad_lib = [
     b'Send Message to ~1,2,5~ This is a Test Message frome Client', #Client can send distinct messages to multiple (selected) rooms
     b'',
     b'Disconnect!', # Client can disconnect from a server
-    b'Server plz shut down', # Server can disconnect from clients
+#    b'Server plz shut down', # Server can disconnect from clients
    
     # Client can gracefully handle server crashes
     # Server can gracefully handle client crashes
@@ -26,4 +27,5 @@ for data in commad_lib:
     print(reciv)
     if reciv == 'Client will Disconnect':
         break
+    time.sleep(2)
 s.close()
