@@ -27,7 +27,8 @@ for data in commad_lib:
     # 接收数据:
     reciv = s.recv(1024).decode('utf-8')
     print(reciv)
+    time.sleep(2)
     if reciv == 'Client will Disconnect':
         break
-    time.sleep(2)
+    
 s.close()
