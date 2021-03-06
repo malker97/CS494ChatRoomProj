@@ -1,6 +1,6 @@
 import time ##引入time只是想用sleep函数来更好的展示测试的内容
 import socket
-import base64
+# import base64
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 commad_lib = [
