@@ -1,6 +1,8 @@
 # CS494ChatRoomProj
 This is a chat room software based on UDP protocol. 
 # About this Project
+## Abstract
+
 ## About the Internetwork Part
 This Project is Hosting on AliClould Platform. the domain is malker.cn prot is 9999 (if u cant get the ipaddress, u need add dns21.hichina.com or dns22.hichina.com) 
 ## About Client Part

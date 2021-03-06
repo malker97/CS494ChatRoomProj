@@ -73,6 +73,7 @@ while True:
     str_ans = ''
     
     str_ans = switchcases(str_command)
-    reply = str(x) + '\n'  + str_ans # + listrooms(rooms)
+    str_ans = str(x) + '\n'  + str_ans
+    reply = str_ans # + listrooms(rooms)
     str_ans = ''
     s.sendto(reply.encode('utf-8'), addr)
