@@ -78,5 +78,5 @@ while True:
     # str_ans = base64.b64encode(str_ans.encode())
     reply = str_ans # + listrooms(rooms)
     str_ans = ''
-    s.sendto(reply, addr)
+    s.sendto(reply.encode('Testencode'), addr)
     # s.sendto(reply.encode('utf-8'), addr)
