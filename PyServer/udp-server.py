@@ -23,7 +23,7 @@ def switchcases(s: str)->str:
     if s == 'Server status':
         ans_str = "Connected Ok"
     elif s == 'Creat new room':
-        rooms.append(Room.creatchatroom('Room-'+str(len(rooms)),len(rooms),'Test Uesr'))
+        rooms.append(Room.creatchatroom('Room-'+str(len(rooms)+1),len(rooms),'Test Uesr'))
         ans_str = 'Room has created'
     elif str_command == 'Get Room List':
         ans_str = List.listrooms(rooms)
