@@ -52,7 +52,10 @@ def switchcases(s: str)->str:
     #     for i in range(len(rooms)):
     
     return ans_str
-
+def savetolog(s : str):
+    file = open('log.txt',"a")
+    file.write(s)
+    file.close
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 绑定端口:
@@ -67,6 +70,7 @@ while True:
     print('Received from %s:%s.' % addr)
     str_command = str_command.decode('utf-8')
     print(str_command)
+    savetolog(str_command)
     if str_command == 'Server plz shut down':
         print('Server get the shutdown command, it will shutdown now!')
         # s.sendto('Server get the shutdown command, it will shutdown now!'.encode('utf-8'),addr)
