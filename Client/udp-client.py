@@ -20,6 +20,10 @@ commad_lib = [
     # Client can gracefully handle server crashes
     # Server can gracefully handle client crashes
 ]
+def savetolog(s : str):
+    file = open('log.txt',"a")
+    file.write(s)
+    file.close
 for data in commad_lib:
     # 发送数据:
     # b64cmd = base64.b64encode(data.encode())
@@ -27,6 +31,7 @@ for data in commad_lib:
     # 接收数据:
     reciv = s.recv(1024).decode('utf-8')
     print(reciv)
+    savetolog(reciv)
     time.sleep(2)
     if reciv == 'Client will Disconnect':
         break
