@@ -4,7 +4,7 @@ import sys
 import datetime
 import time
 import os
-# 这是基于用户的测试部分
+# Test for the virtual user
 import User
 # user_1 = User.creatuser(1,'李华','192.168.0.2')
 
@@ -14,9 +14,9 @@ class creatchatroom:
     name = ''
     contain = 4
     path = './Rooms/'
-    infopath = ''# 懒得优化信息读取方法了，所以开了个info文件来存储信息
+    infopath = ''# get the infomation
     passwd = 123456
-    # 这个是构造函数，存储了房间的基本信息，包括构造者，容纳人数，和房间的名字
+    # this is creat function, to creat room name, contain creater
     def __init__(self,name,contain,creater):
         self.name = name
         self.contain = contain
@@ -31,10 +31,10 @@ class creatchatroom:
             file.write('Creat Date:\n'+str(datetime.datetime.now())+'\n'+'Creater:\n'+creater+'\n\n')
             file.write(' \n')
             file.close
-    # 这个是给房间生成了更改密码的方法
+    # to protect the passwd
     def changepasswd(self, newpasswd):
         self.passwd = newpasswd
-    # 这个是增加信息到存储聊天记录的文件中
+    # add some msg to chat history file
     def addmsg(self,username,msg):
         file = open(self.path,"a")
         addedstr = str(datetime.datetime.now())+'\n'+ username + ':\n' + msg + '\n'
@@ -42,20 +42,20 @@ class creatchatroom:
         file.close
         # print(addedstr)
         return addedstr
-    # 这应该只是个封装了get方法，但是目测可能用不到
+    # a simple get method
     def getroomname(self):
         return self.name
-    # 这个是获取聊天记录，但是懒得实现了，所以调取了读取文件内的所以内容
+    # to get all chat history
     def getchathistory(self):
         file = open(self.path,'r')
         chathistory = file.read()
         # print(chathistory)
         file.close()
         return chathistory
-    # 这个是记录用户加入的时间在第5行
+    # the join infomation in 
     def joinuser(self, str_username):
         userjoindate = str(datetime.datetime.now())
-        userinfoLine = 4 # 这是事实上是第五行
+        userinfoLine = 4 # actually 5
         needinsertline = 'User: '+ str_username +'\tJoined at '+ userjoindate + '\n'
         lines = []
         file = open(self.infopath,'r')
@@ -72,7 +72,7 @@ class creatchatroom:
         file.write(needinsertline)
         file.write(' \n')
         file.close
-    # 这个是实现获取谁曾经加入房间，事实上只需要输出回车之前的内容
+        # get room infomation
     def getroominfo(self):
         lines = []
         file = open(self.infopath,'r')
@@ -87,7 +87,7 @@ class creatchatroom:
             #     # print("break生效了")
             #     break
             if lines == ' ':
-                print("break生效了")
+                print("break is working")
                 break
         file.close()
         s = ''.join(lines)

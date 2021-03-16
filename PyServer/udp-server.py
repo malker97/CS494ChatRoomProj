@@ -58,13 +58,13 @@ def savetolog(s : str):
     file.close
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# 绑定端口:
+# Combine the host to port 9999:
 s.bind(('172.21.14.169', 9999))
 
 print('Bind UDP on 9999...')
 
 while True:
-    # 接收数据:
+    # get msg from clint:
     str_command, addr = s.recvfrom(1024)
     x = datetime.datetime.now()
     print('Received from %s:%s.' % addr)

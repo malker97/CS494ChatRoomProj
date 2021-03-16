@@ -1,4 +1,4 @@
-import time ##引入time只是想用sleep函数来更好的展示测试的内容
+import time ## Using the sleep func to help the test clear
 import socket
 # import base64
 
@@ -25,10 +25,10 @@ def savetolog(s : str):
     file.write(s)
     file.close
 for data in commad_lib:
-    # 发送数据:
+    # send msg
     # b64cmd = base64.b64encode(data.encode())
     s.sendto(data, ('malker.cn', 9999))
-    # 接收数据:
+    # get msg:
     reciv = s.recv(1024).decode('utf-8')
     print(reciv)
     savetolog(reciv)
