@@ -1,3 +1,4 @@
+# Final Grade: 90 + 5 (Cloud Host)
 # CS494ChatRoomProj
 This is a chat room software based on UDP protocol. 
 # About this Project
